@@ -1,2 +1,5 @@
 # job_assignment_assurekit_secure
 This is a security-hardened version of the original project: github.com/DolanDark/job_assignment_assurekit/blob/main/app.py
+Hello everyone I'm Rose, after reviewing the original project code, several critical security vulnerabilities were found that could lead to server compromise and service disruption, including running in production with debug=True, hardcoded weak secret keys, exposed default database credentials, improper database connection handling that could cause connection leaks and potential denial of service, a faulty _getConnection function that could return None and crash the application, and overly permissive CORS settings. All issues have now been fixed by moving sensitive configurations to environment variables, enforcing secure production settings, improving database connection management with proper error handling and safe retries, and restricting CORS to trusted origins, making the system significantly more secure and production-ready. 
+
+Orginal Project Link : https://github.com/DolanDark/job_assignment_assurekit/blob/main/app.py
